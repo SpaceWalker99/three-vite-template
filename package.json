@@ -1,0 +1,23 @@
+{
+  "name": "three-vite-template",
+  "version": "1.0.0",
+  "description": "template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite dev"
+  },
+  "bin": {
+    "three-vite-template": "bin/install.mjs"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.1.0"
+  },
+  "dependencies": {
+    "three": "^0.161.0"
+  }
+}

@@ -21,14 +21,15 @@ const projectName = process.argv[2];
 const currentPath = process.cwd();
 const projectPath = path.join(currentPath, projectName);
 // TODO: change to your boilerplate repo
-const git_repo = "https://github.com/programonaut/simple-ts-app.git";
+const git_repo = "https://github.com/SpaceWalker99/three-vite-template.git";
 
 // create project directory
 if (fs.existsSync(projectPath)) {
-  console.log(`The file ${projectName} already exist in the current directory, please give it another name.`);
+  console.log(
+    `The file ${projectName} already exist in the current directory, please give it another name.`
+  );
   process.exit(1);
-}
-else {
+} else {
   fs.mkdirSync(projectPath);
 }
 
@@ -40,9 +41,15 @@ try {
 
   const cleanSpinner = ora("Removing useless files").start();
   // remove my git history
-  const rmGit = rm(path.join(projectPath, ".git"), { recursive: true, force: true });
+  const rmGit = rm(path.join(projectPath, ".git"), {
+    recursive: true,
+    force: true,
+  });
   // remove the installation file
-  const rmBin = rm(path.join(projectPath, "bin"), { recursive: true, force: true });
+  const rmBin = rm(path.join(projectPath, "bin"), {
+    recursive: true,
+    force: true,
+  });
   await Promise.all([rmGit, rmBin]);
 
   process.chdir(projectPath);
@@ -58,7 +65,6 @@ try {
   console.log("You can now run your app with:");
   console.log(`    cd ${projectName}`);
   console.log(`    npm run dev`);
-
 } catch (error) {
   // clean up in case of error, so the user does not have to do it manually
   fs.rmSync(projectPath, { recursive: true, force: true });

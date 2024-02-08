@@ -1,6 +1,6 @@
 {
   "name": "three-vite-template",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "template",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "ora": "^8.0.1",
     "vite": "^5.1.0"
   },
   "dependencies": {

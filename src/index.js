@@ -1,5 +1,7 @@
 import * as THREE from "three";
 
+const clock = new THREE.Clock();
+
 class Main {
   constructor() {
     this.canvas = document.querySelector("#canvas");
@@ -18,6 +20,8 @@ class Main {
       canvas: this.canvas,
       antialias: true,
     });
+
+    this.renderer.setPixelRatio(window.devicePixelRatio || 1);
 
     this.addMeshes();
     this.resize();

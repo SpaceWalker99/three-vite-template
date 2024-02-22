@@ -13,7 +13,7 @@ const rm = promisify(fs.rm);
 if (process.argv.length < 3) {
   console.log("You have to provide a name to your app.");
   console.log("For example :");
-  console.log("    npx simple-ts-app my-app");
+  console.log("    npx three-vite-template my-app");
   process.exit(1);
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "three-vite-template",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "template",
   "main": "index.js",
   "scripts": {
@@ -9,13 +9,15 @@
   "bin": {
     "three-vite-template": "bin/install.mjs"
   },
+  "type": "module",
   "keywords": [
     "template"
   ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vite": "^5.1.0"
+    "vite": "^5.1.0",
+    "vite-plugin-glsl": "^1.2.1"
   },
   "dependencies": {
     "three": "^0.161.0"
